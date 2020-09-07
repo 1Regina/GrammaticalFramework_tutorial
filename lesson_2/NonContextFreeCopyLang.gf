@@ -3,15 +3,17 @@ abstract NonContextFreeCopyLang = {
     flags startcat = Expr ;
 
     cat 
-        Expr ;
+
+        Terminal;
         Subexpr ;
-        Terminal ;
+        Expr ;
+
 
     fun 
-        a : Terminal ;
-        b : Terminal ;
-        mk_subexpr : Terminal -> Terminal -> Subexpr;
-        append_a : Subexpr -> Subexpr ;
-        append_b : Subexpr -> Subexpr ;
-        mk_expr  : Subexpr -> Expr ;
+        empty           : Subexpr; 
+        a , b           : Terminal;
+
+        append          : Terminal -> Subexpr -> Subexpr ;
+
+        mk_expr         : Subexpr -> Expr ;
 }
