@@ -1,0 +1,6 @@
+graph {
+n0[label = "Hello : Greeting", style = "solid", shape = "plaintext"] ;
+n0_0[label = "Mum : Recipient", style = "solid", shape = "plaintext"] ;
+n0 -- n0_0 [style = "solid"];
+}
+
