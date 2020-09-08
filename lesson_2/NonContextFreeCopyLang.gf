@@ -1,19 +1,27 @@
-abstract NonContextFreeCopyLang = {
-
-    flags startcat = Expr ;
-
-    cat 
-
-        Terminal;
-        Subexpr ;
-        Expr ;
+concrete NonContextFreeCopyLang of NonContextFreeCopy = {
 
 
-    fun 
-        empty           : Subexpr; 
-        a , b           : Terminal;
+lincat
+    Terminal, Subexpr, Expr = {s: Str}; -- or  = SS;
 
-        append          : Terminal -> Subexpr -> Subexpr ;
+lin
+    empty                   = {s = ""} ;
 
-        mk_expr         : Subexpr -> Expr ;
+    -- Terminal--
+    a                       = {s = "a"} ; 
+    b                       = {s = "b"} ;
+
+    -- Terminal -> Subexpr -> Subexpr; 
+    
+    append t sub            = { s = t.s ++ sub.s}; -- {s = t.s} ++ {s = sub.s} but not defined in oper
+     
+    -- Subexpr -> Expr;
+    mk_expr sub              = { s = sub.s}; -- ss sub
+
+
+-- oper
+--     SS                  : Type = {s : Str} ;
+--     ss                  : Str -> SS = \x -> {s = x} ; 
+--                           "A" -> {s = "A"} ;
+    
 }
