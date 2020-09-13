@@ -1,4 +1,4 @@
-resource DrinkTable = {
+resource ParamDrinkTable = {
     param -- see https://github.com/GrammaticalFramework/gf-rgl/blob/master/src/korean/ParamKor.gf#L115-L118
     
     Number = Sg | Pl ;
