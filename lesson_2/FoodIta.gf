@@ -1,4 +1,4 @@
-concrete FoodIta of Food = 
+concrete FoodIta of Food = DrinkIta **
 
 {
 
@@ -11,13 +11,13 @@ concrete FoodIta of Food =
         ExcuseMe phrase                         = {s  = "Mi scusi" ++ phrase.s} ;    
 
         Is item quality                         = {s = item.s ++ "è" ++ quality.s} ;
-        qnIs item quality                         = {s  = "è" ++ item.s ++ quality.s} ;
+        QnIs item quality                       = {s  = "è" ++ item.s ++ quality.s} ;
 
         This kind                               = {s = "questo" ++ kind.s} ;
         That kind                               = {s = "quel" ++ kind.s} ;
         QKind quality kind                      = {s = kind.s ++ quality.s} ;
        
-        Wine                                    = {s = "vino"} ;
+        -- (remove as wine is in DrinksIta extension) Wine                                    = {s = "vino"} ; 
         Cheese                                  = {s = "formaggio"} ;
         Fish                                    = {s = "pesce"} ;
         

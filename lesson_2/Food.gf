@@ -1,5 +1,5 @@
-abstract Food = {
-  
+abstract Food = Drink ** {
+  -- ** To extend Drink module to Food Module
       flags startcat = Statement ;
   
       cat
@@ -13,11 +13,12 @@ abstract Food = {
         Very                                                    : Quality -> Quality ;
         QKind                                                   : Quality -> Kind -> Kind ;
         
-        Wine, Cheese, Fish                                      : Kind ;
+       -- (no more after sep extension) Wine                                                    : Drink ;      
+        Cheese, Fish                                            : Kind ;
         This, That                                              : Kind -> Item ; 
 
         Is                                                      : Item -> Quality -> Phrase ;
-        qnIs                                                    : Item -> Quality -> Phrase ;
+        QnIs                                                    : Item -> Quality -> Phrase ;
                                                                  --(takes an/(x) argument(s) of type) --> (returns product type);  
     }
 

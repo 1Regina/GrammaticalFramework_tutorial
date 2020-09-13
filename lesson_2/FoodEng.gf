@@ -11,13 +11,13 @@ concrete FoodEng of Food =
         ExcuseMe phrase                            = {s  = "Excuse Me" ++ phrase.s} ;       
 
         Is item quality                           = {s  = item.s ++ "is" ++ quality.s} ;
-        qnIs item quality                         = {s  = "is" ++ item.s ++ quality.s} ;
+        QnIs item quality                         = {s  = "is" ++ item.s ++ quality.s} ;
         
         This kind                                 = {s  = "this" ++ kind.s} ;
         That kind                                 = {s  = "that" ++ kind.s} ;
         QKind quality kind                        = {s  = quality.s ++ kind.s} ;
  
-        Wine                                      = {s  = "wine"} ;
+        ---- (no more after sep extension)  Wine                                      = {s  = "wine"} ;
         Cheese                                    = {s  = "cheese"} ;
         Fish                                      = {s  = "fish"} ;
 
