@@ -1,11 +1,13 @@
 concrete FoodsEng of Foods = open Prelude in {
   
     lincat
-      S, Quality = SS ;
+      Statement, Phrase, Quality = SS ;
       Kind = {s : Number => Str} ;
       Item = {s : Str ; n : Number} ;
   
     lin
+      NoPrefix phrase                            = {s  =  phrase.s} ;
+      ExcuseMe phrase                            = {s  = "Excuse Me" ++ phrase.s} ;      
       Is item quality = ss (item.s ++ copula item.n ++ quality.s) ;
       This  = det Sg "this" ;
       That  = det Sg "that" ;
@@ -31,10 +33,11 @@ concrete FoodsEng of Foods = open Prelude in {
       CN : Type = {s : Number => Str} ;      -- pizza/pizzas
       NP : Type = {s : Str ; n : Number} ;   -- pizza (decided)
       
-      det :  Number -> (determiner : Str) -> CN -> NP = \n,d,cn -> { 
-                                                                                        s = d ++ cn.s ! n ;
-                                                                                        n = n
-                                                                                        } ;
+      -- det :  Number -> (determiner : Str) -> CN -> NP = \d,n,cn -> { 
+      det :  Number -> Str -> CN -> NP = \n,d,cn -> {   
+                                                        s = d ++ cn.s ! n ;
+                                                        n = n
+                                                                              } ;
 
 
       noun : Str -> Str -> {s : Number => Str} = \man,men -> {s = table {

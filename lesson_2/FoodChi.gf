@@ -6,7 +6,7 @@ concrete FoodChi of Food = DrinkChi ** open StringOper in {
     lin
         -- Partial Application exercise
         NoPrefix                    = prefix "" ;
-        ExcuseMe                    = prefix "Excuse Me" ;
+        ExcuseMe                    = prefix "对不起" ;
 
         -- Is                          = infix "是" ; fail bcos infix does not start with Str
         Is item quality           = cc item (prefix "很" quality) ;

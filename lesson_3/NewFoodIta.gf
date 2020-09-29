@@ -1,4 +1,5 @@
-concrete FoodIta of Food = DrinkIta **
+concrete NewFoodIta of NewFood = 
+        --DrinkIta **
 
 {
 
@@ -15,7 +16,10 @@ concrete FoodIta of Food = DrinkIta **
 
         This kind                               = {s = "questo" ++ kind.s} ;
         That kind                               = {s = "quel" ++ kind.s} ;
+
         QKind quality kind                      = {s = kind.s ++ quality.s} ;
+       
+
        
         -- (remove as wine is in DrinksIta extension) Wine                                    = {s = "vino"} ; 
         Cheese                                  = {s = "formaggio"} ;
