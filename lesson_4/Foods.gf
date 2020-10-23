@@ -1,6 +1,6 @@
 abstract Foods =  {
 
-      flags startcat = Statement ;
+      flags startcat = Phrase ; -- Org was Statement. Changed to cater for the short version in FoodsIta Phrase
   
       cat
         Phrase ;
