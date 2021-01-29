@@ -1,3 +1,4 @@
+    -- from gf tutorial: "Code for the Foods Functor"
     --# -path=.:../foods
   
     incomplete concrete FoodsI of Foods = open Syntax, LexFoods in {

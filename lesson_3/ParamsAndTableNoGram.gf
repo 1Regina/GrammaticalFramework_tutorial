@@ -23,8 +23,8 @@ resource ParamsAndTableNoGram = {
    oper
      regNoun : Str -> {s : Number => Str} = \noun -> {s =
        table {
-      Sg      => noun + "s"     ;
-      Pl      => noun           
+      Sg      => noun   ;
+      Pl      => noun + "s"             
                }
        }; 
 

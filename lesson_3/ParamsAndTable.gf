@@ -23,8 +23,8 @@ resource ParamsAndTable = {
    oper
      regNoun : Str -> {s : NounForm => Str} = \noun -> {s =
        table {
-      Sg      => noun + "s"     ;
-      Pl      => noun           
+      Noun Sg      => noun     ;     -- 21 Jan 2021: Added Noun to Sg to compile
+      Noun Pl      => noun  + "s"    -- 21 Jan 2021: Added Noun to Pl to compile     
                }
        }; 
 
@@ -44,7 +44,7 @@ resource ParamsAndTable = {
 
     -- Verb --
 
-    regVerb : Str -> {s : VerbForm => Str} = \talk -> {
+   regTalk : Str -> {s : VerbForm => Str} = \talk -> {
       s = table {
         VPresent Sg => talk + "s" ;
         VPresent Pl => talk ;
